@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,6 +17,7 @@
       <a href="#">N2</a>
       <a href="#">N1</a>
       <a href="https://www.buymeacoffee.com/YOURUSERNAME" target="_blank">☕ Buy Me a Coffee</a>
+      <button id="theme-toggle">🌓 Toggle Theme</button>
     </nav>
   </header>
 
@@ -31,5 +32,14 @@
   <footer>
     <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>
